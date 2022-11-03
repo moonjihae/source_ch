@@ -1,0 +1,14 @@
+name : sourch_ch_test
+  jobs:
+    main:
+      runs-on: ubuntu-20.04
+      steps:
+        - name: Set up php5.6
+          uses: shivammathur/setup-php@v2
+          extensions: grpc.so
+          with:
+            php-version: 5.6
+        - name : Check php version
+          run: |
+            php -v
+        
